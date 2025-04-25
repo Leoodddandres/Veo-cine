@@ -1,0 +1,954 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeoCine - Tu plataforma de películas online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Importación de fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabecera y menú de navegación -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="/ChatGPT Image 25 abr 2025, 01_02_40 p.m..png" alt="VeoCine Logo" class="logo">
+            </div>
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="text" placeholder="Buscar películas, series..." id="search-input">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active"><i class="fas fa-home mobile-icon"></i> Inicio</a></li>
+                    <li><a href="#movies"><i class="fas fa-film mobile-icon"></i> Películas</a></li>
+                    <li><a href="#series"><i class="fas fa-tv mobile-icon"></i> Series</a></li>
+                    <li><a href="#trending"><i class="fas fa-chart-line mobile-icon"></i> Tendencias</a></li>
+                    <li class="has-dropdown">
+                        <a href="#categories"><i class="fas fa-list mobile-icon"></i> Categorías</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item"><i class="fas fa-fighter-jet"></i> Acción</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-theater-masks"></i> Drama</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-laugh"></i> Comedia</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-robot"></i> Sci-Fi</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-ghost"></i> Terror</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-heart"></i> Romance</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-users"></i> Para ver en familia</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-globe"></i> Documentales</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-hat-wizard"></i> Fantasía</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-child"></i> Infantil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#mylist"><i class="fas fa-bookmark mobile-icon"></i> Mi Lista</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner (Home Section) -->
+    <section id="home" class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Disfruta del mejor cine online</h1>
+                <p>Miles de películas y series a un solo clic. Sin cortes, en alta definición.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Explorar catálogo</button>
+                    <button class="btn-secondary">Últimos estrenos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movies Section (Now visible on homepage) -->
+    <section class="featured-content home-section">
+        <div class="container">
+            <h2 class="section-title">Películas Destacadas</h2>
+            <div class="section-filters">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Acción</button>
+                <button class="filter-btn">Drama</button>
+                <button class="filter-btn">Comedia</button>
+                <button class="filter-btn">Sci-Fi</button>
+            </div>
+            <div class="movie-grid">
+                <!-- Movie cards from the Movies section -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A1A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#412B5A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Universo Infinito</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.5
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#1A2A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#2B415A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Sueños Digitales</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 7.9
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#3A1A2A"/>
+                            <circle cx="120" cy="140" r="50" fill="#5A2B41"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">El Último Viaje</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 9.2
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A3A1A"/>
+                            <circle cx="120" cy="140" r="50" fill="#415A2B"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Memorias Perdidas</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.0
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="view-more-container">
+                <button class="btn-view-more">Ver más películas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Series Section (Now visible on homepage) -->
+    <section class="featured-content home-section">
+        <div class="container">
+            <h2 class="section-title">Series Destacadas</h2>
+            <div class="section-filters">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Drama</button>
+                <button class="filter-btn">Comedia</button>
+                <button class="filter-btn">Fantasía</button>
+                <button class="filter-btn">Crimen</button>
+            </div>
+            <div class="movie-grid">
+                <!-- Series cards from the Series section -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#4A1A5A"/>
+                            <circle cx="120" cy="140" r="50" fill="#6B2B7A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mundos Paralelos</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024 • 3 Temporadas</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 9.3
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A0A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#4B1B5A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Secretos del Poder</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023 • 2 Temporadas</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.5
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#3A0A2A"/>
+                            <circle cx="120" cy="140" r="50" fill="#5A1B4A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Crónicas Urbanas</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2022 • 4 Temporadas</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.9
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="view-more-container">
+                <button class="btn-view-more">Ver más series</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section (Now visible on homepage) -->
+    <section class="featured-content home-section">
+        <div class="container">
+            <h2 class="section-title">Tendencias</h2>
+            <div class="section-filters">
+                <button class="filter-btn active">Hoy</button>
+                <button class="filter-btn">Esta semana</button>
+                <button class="filter-btn">Este mes</button>
+            </div>
+            <div class="trending-slider">
+                <!-- Trending item from Trending section -->
+                <div class="trending-item">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#0A2A4A"/>
+                            <circle cx="120" cy="140" r="50" fill="#1B4A7A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="trending-info">
+                        <h3>El Último Desafío</h3>
+                        <div class="trending-meta">
+                            <span class="trending-rank">#1</span>
+                            <span class="trending-rating"><i class="fas fa-star"></i> 9.7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional trending items -->
+                <div class="trending-item">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#3A1A4A"/>
+                            <circle cx="120" cy="140" r="50" fill="#5B2B6A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="trending-info">
+                        <h3>Mundos Paralelos</h3>
+                        <div class="trending-meta">
+                            <span class="trending-rank">#2</span>
+                            <span class="trending-rating"><i class="fas fa-star"></i> 9.3</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trending-item">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A4A1A"/>
+                            <circle cx="120" cy="140" r="50" fill="#3B6A2B"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="trending-info">
+                        <h3>Origen Oculto</h3>
+                        <div class="trending-meta">
+                            <span class="trending-rank">#3</span>
+                            <span class="trending-rating"><i class="fas fa-star"></i> 9.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de películas -->
+    <section id="movies" class="content-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Películas</h2>
+            <div class="section-filters">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Acción</button>
+                <button class="filter-btn">Drama</button>
+                <button class="filter-btn">Comedia</button>
+                <button class="filter-btn">Sci-Fi</button>
+            </div>
+            <div class="movie-grid">
+                <!-- Tarjeta de película 1 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A1A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#412B5A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Universo Infinito</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.5
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de película 2 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#1A2A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#2B415A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Sueños Digitales</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 7.9
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de película 3 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#3A1A2A"/>
+                            <circle cx="120" cy="140" r="50" fill="#5A2B41"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">El Último Viaje</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 9.2
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de película 4 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A3A1A"/>
+                            <circle cx="120" cy="140" r="50" fill="#415A2B"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Memorias Perdidas</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.0
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de película 5 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#3A2A1A"/>
+                            <circle cx="120" cy="140" r="50" fill="#5A412B"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Cazadores de Sombras</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 7.5
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de película 6 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#1A1A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#2B2B5A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Código Eterno</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.7
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="view-more-container">
+                <button class="btn-view-more">Ver más películas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de series -->
+    <section id="series" class="content-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Series</h2>
+            <div class="section-filters">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Drama</button>
+                <button class="filter-btn">Comedia</button>
+                <button class="filter-btn">Fantasía</button>
+                <button class="filter-btn">Crimen</button>
+            </div>
+            <div class="movie-grid">
+                <!-- Tarjeta de serie 1 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#4A1A5A"/>
+                            <circle cx="120" cy="140" r="50" fill="#6B2B7A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mundos Paralelos</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2024 • 3 Temporadas</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 9.3
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de serie 2 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A0A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#4B1B5A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Secretos del Poder</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2023 • 2 Temporadas</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.5
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta de serie 3 -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#3A0A2A"/>
+                            <circle cx="120" cy="140" r="50" fill="#5A1B4A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Crónicas Urbanas</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2022 • 4 Temporadas</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.9
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="view-more-container">
+                <button class="btn-view-more">Ver más series</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de tendencias -->
+    <section id="trending" class="content-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Tendencias</h2>
+            <div class="section-filters">
+                <button class="filter-btn active">Hoy</button>
+                <button class="filter-btn">Esta semana</button>
+                <button class="filter-btn">Este mes</button>
+            </div>
+            <div class="trending-slider">
+                <!-- Trending items -->
+                <div class="trending-item">
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#0A2A4A"/>
+                            <circle cx="120" cy="140" r="50" fill="#1B4A7A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="trending-info">
+                        <h3>El Último Desafío</h3>
+                        <div class="trending-meta">
+                            <span class="trending-rank">#1</span>
+                            <span class="trending-rating"><i class="fas fa-star"></i> 9.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de estrenos exclusivos -->
+    <section id="categories" class="content-section exclusive-premieres" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Estrenos Exclusivos</h2>
+            <div class="exclusive-banner">
+                <div class="exclusive-content">
+                    <div class="exclusive-badge">Exclusivo</div>
+                    <h3>Estreno Mundial: "Dimensión Desconocida"</h3>
+                    <p>La nueva película de ciencia ficción que está revolucionando el género. Disponible solo en VeoCine.</p>
+                    <div class="exclusive-meta">
+                        <span class="exclusive-date">Disponible: 15 Mayo</span>
+                        <span class="exclusive-quality">4K HDR</span>
+                    </div>
+                    <button class="btn-primary">Ver Tráiler</button>
+                </div>
+            </div>
+            <div class="movie-grid exclusive-grid">
+                <!-- Tarjeta de exclusivo 1 -->
+                <article class="movie-card exclusive-card">
+                    <div class="exclusive-tag">Exclusivo</div>
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#2A1A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#412B5A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Origen Oculto</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2025</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 9.4
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Tarjeta de exclusivo 2 -->
+                <article class="movie-card exclusive-card">
+                    <div class="exclusive-tag">Exclusivo</div>
+                    <div class="movie-poster">
+                        <div class="poster-overlay">
+                            <button class="btn-watch">Ver Ahora</button>
+                        </div>
+                        <svg class="poster-placeholder" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="240" height="340" fill="#1A2A3A"/>
+                            <circle cx="120" cy="140" r="50" fill="#2B415A"/>
+                            <path d="M110 130 L140 140 L110 150 Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Melodía Perdida</h3>
+                        <div class="movie-meta">
+                            <span class="movie-year">2025</span>
+                            <span class="movie-rating">
+                                <i class="fas fa-star"></i> 8.9
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Mi Lista -->
+    <section id="mylist" class="content-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Mi Lista</h2>
+            <div id="empty-list" class="empty-list-message">
+                <i class="fas fa-bookmark"></i>
+                <p>Tu lista está vacía. Agrega contenido marcando el ícono de favoritos en las películas y series.</p>
+                <button class="btn-primary">Explorar Contenido</button>
+            </div>
+            <div id="mylist-content" class="movie-grid" style="display: none;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de suscripción -->
+    <section class="subscription" style="display: none;">
+        <div class="container">
+            <div class="subscription-content">
+                <h2>Disfruta de todo nuestro contenido sin restricciones</h2>
+                <p>Suscríbete ahora y obtén un mes gratis de acceso premium.</p>
+                <div class="subscription-plans">
+                    <div class="plan">
+                        <h3>Básico</h3>
+                        <p class="plan-price">9.99€<span>/mes</span></p>
+                        <ul class="plan-features">
+                            <li>HD disponible</li>
+                            <li>1 dispositivo</li>
+                            <li>Catálogo básico</li>
+                        </ul>
+                        <button class="btn-plan">Elegir plan</button>
+                    </div>
+                    <div class="plan featured">
+                        <div class="plan-badge">Popular</div>
+                        <h3>Estándar</h3>
+                        <p class="plan-price">14.99€<span>/mes</span></p>
+                        <ul class="plan-features">
+                            <li>Full HD disponible</li>
+                            <li>2 dispositivos</li>
+                            <li>Catálogo completo</li>
+                        </ul>
+                        <button class="btn-plan">Elegir plan</button>
+                    </div>
+                    <div class="plan">
+                        <h3>Premium</h3>
+                        <p class="plan-price">19.99€<span>/mes</span></p>
+                        <ul class="plan-features">
+                            <li>4K + HDR disponible</li>
+                            <li>4 dispositivos</li>
+                            <li>Catálogo completo</li>
+                            <li>Estrenos exclusivos</li>
+                        </ul>
+                        <button class="btn-plan">Elegir plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de dispositivos compatibles -->
+    <section class="devices-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Disfruta VeoCine en todos tus dispositivos</h2>
+            <div class="devices-grid">
+                <div class="device-item">
+                    <i class="fas fa-tv"></i>
+                    <h3>Smart TV</h3>
+                    <p>Samsung, LG, Sony, Philips</p>
+                </div>
+                <div class="device-item">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Ordenadores</h3>
+                    <p>Windows, Mac, Chrome OS</p>
+                </div>
+                <div class="device-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Smartphones</h3>
+                    <p>iOS, Android</p>
+                </div>
+                <div class="device-item">
+                    <i class="fas fa-tablet-alt"></i>
+                    <h3>Tablets</h3>
+                    <p>iPad, Android</p>
+                </div>
+                <div class="device-item">
+                    <i class="fab fa-xbox"></i>
+                    <h3>Consolas</h3>
+                    <p>Xbox, PlayStation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados de búsqueda -->
+    <section id="search-results" class="content-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Resultados de búsqueda</h2>
+            <p id="search-query">Mostrando resultados para: "<span></span>"</p>
+            <div id="results-grid" class="movie-grid">
+            </div>
+            <div id="no-results" class="empty-list-message" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No se encontraron resultados para tu búsqueda. Intenta con otros términos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para reproductor de video -->
+    <div id="video-player-modal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="video-container">
+                <div class="player-controls">
+                    <h3 id="video-title">Título de la película</h3>
+                    <div class="video-player-UI">
+                        <div class="control-bar">
+                            <button class="play-pause-btn"><i class="fas fa-play"></i></button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-filled"></div>
+                                </div>
+                                <span class="time-display">00:00 / 02:15:00</span>
+                            </div>
+                            <div class="volume-container">
+                                <button class="volume-btn"><i class="fas fa-volume-up"></i></button>
+                                <div class="volume-slider">
+                                    <div class="volume-filled"></div>
+                                </div>
+                            </div>
+                            <button class="fullscreen-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mock-video">
+                    <div class="play-icon"><i class="fas fa-play-circle"></i></div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="video-meta">
+                    <div class="video-quality"><span>HD</span></div>
+                    <div class="video-rating"><i class="fas fa-star"></i> <span>8.5</span></div>
+                    <div class="video-year"><span>2024</span></div>
+                    <div class="video-duration"><i class="far fa-clock"></i> <span>2h 15m</span></div>
+                </div>
+                <p class="video-description">Esta película es parte de nuestra selección en VeoCine. Disfruta de esta y miles de películas más en nuestra plataforma.</p>
+                <div class="video-actions">
+                    <button class="btn-action"><i class="fas fa-plus"></i> Mi Lista</button>
+                    <button class="btn-action"><i class="fas fa-share"></i> Compartir</button>
+                    <button class="btn-action"><i class="fas fa-download"></i> Descargar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/ChatGPT Image 25 abr 2025, 01_02_40 p.m..png" alt="VeoCine Logo" class="logo-small">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#home">Inicio</a></li>
+                            <li><a href="#movies">Películas</a></li>
+                            <li><a href="#series">Series</a></li>
+                            <li><a href="#trending">Tendencias</a></li>
+                            <li><a href="#categories">Categorías</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-legal">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Preguntas Frecuentes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-help">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Centro de Ayuda</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Dispositivos compatibles</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p> 2025 VeoCine - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Add script to hide sections that aren't selected
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav-links a');
+            // Get all content sections
+            const contentSections = document.querySelectorAll('section[id]');
+            
+            // Initially hide all sections except home
+            contentSections.forEach(section => {
+                if (section.id !== 'home') {
+                    section.style.display = 'none';
+                }
+            });
+            
+            // Show only the home sections initially
+            document.getElementById('home').style.display = 'block';
+            document.querySelectorAll('.home-section').forEach(section => {
+                section.style.display = 'block';
+            });
+            
+            // Add click event to nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target section id
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Hide all sections
+                    contentSections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Hide home sections
+                    document.querySelectorAll('.home-section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Show only the target section
+                    if (targetId === 'home') {
+                        document.getElementById('home').style.display = 'block';
+                        document.querySelectorAll('.home-section').forEach(section => {
+                            section.style.display = 'block';
+                        });
+                    } else {
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            targetSection.style.display = 'block';
+                        }
+                    }
+                    
+                    // Update active class
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
